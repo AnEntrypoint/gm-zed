@@ -1,4 +1,4 @@
-# Glootie for Zed
+# GM for Zed
 
 AI-powered state machine for Zed Editor with native Claude 3.5 Sonnet support, autonomous agent coordination, and MCP integration.
 
@@ -48,7 +48,7 @@ After installation:
 
 1. Open Zed
 2. Press `Cmd+Shift+P` (macOS) or `Ctrl+Shift+P` (Linux/Windows)
-3. Type "Activate State Machine" to enable Glootie
+3. Type "Activate State Machine" to enable GM
 4. Use "Toggle AI Assistant" to enable/disable AI features
 5. Type "Show State" to view current machine status
 
@@ -80,7 +80,7 @@ Edit `~/.config/zed/settings.json`:
 
 ### Language Server Integration
 
-Glootie integrates with Zed's language server protocol for:
+GM integrates with Zed's language server protocol for:
 - Code completion
 - Diagnostics
 - Code formatting

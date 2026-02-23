@@ -1,14 +1,14 @@
 use zed_extension_api::*;
 use std::sync::{Arc, Mutex};
 
-pub struct GlootieExtension {
+pub struct GmExtension {
     is_active: bool,
     assistant_enabled: bool,
 }
 
-impl GlootieExtension {
+impl GmExtension {
     pub fn new() -> Self {
-        GlootieExtension {
+        GmExtension {
             is_active: false,
             assistant_enabled: false,
         }
@@ -36,8 +36,8 @@ impl GlootieExtension {
 }
 
 lazy_static::lazy_static! {
-    static ref EXTENSION: Arc<Mutex<GlootieExtension>> = {
-        Arc::new(Mutex::new(GlootieExtension::new()))
+    static ref EXTENSION: Arc<Mutex<GmExtension>> = {
+        Arc::new(Mutex::new(GmExtension::new()))
     };
 }
 
@@ -59,21 +59,21 @@ mod tests {
 
     #[test]
     fn test_extension_creation() {
-        let ext = GlootieExtension::new();
+        let ext = GmExtension::new();
         assert!(!ext.is_active());
         assert!(!ext.is_assistant_enabled());
     }
 
     #[test]
     fn test_extension_activation() {
-        let mut ext = GlootieExtension::new();
+        let mut ext = GmExtension::new();
         ext.activate();
         assert!(ext.is_active());
     }
 
     #[test]
     fn test_extension_deactivation() {
-        let mut ext = GlootieExtension::new();
+        let mut ext = GmExtension::new();
         ext.activate();
         ext.deactivate();
         assert!(!ext.is_active());
@@ -81,7 +81,7 @@ mod tests {
 
     #[test]
     fn test_toggle_assistant() {
-        let mut ext = GlootieExtension::new();
+        let mut ext = GmExtension::new();
         assert!(!ext.is_assistant_enabled());
         ext.toggle_assistant();
         assert!(ext.is_assistant_enabled());
