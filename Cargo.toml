@@ -1,10 +1,10 @@
 [package]
 name = "gm-zed"
-version = "2.0.24"
+version = "2.0.25"
 edition = "2021"
 authors = ["AnEntrypoint"]
 license = "MIT"
-description = "Advanced Claude Code plugin with WFGY integration, MCP tools, and automated hooks"
+description = "State machine agent with hooks, skills, and automated git enforcement"
 repository = "https://github.com/AnEntrypoint/gm-zed"
 
 [lib]
